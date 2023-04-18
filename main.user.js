@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name           google block location text
 // @author         b-illy
-// @version        1.0
+// @version        1.1
 // @match          https://www.google.com/search*
 // @run-at         document-start
 // @downloadURL    https://b-illy.github.io/google-block-location/main.user.js
@@ -11,5 +11,8 @@
 
 const headElem = document.getElementsByTagName("head")[0];
 const styleElem = document.createElement("style");
-styleElem.innerHTML = "#oFNiHe { display: none !important; }";
+styleElem.innerHTML = `
+#oFNiHe, .dfB0uf { 
+	display: none !important;
+}`;
 headElem.appendChild(styleElem);
